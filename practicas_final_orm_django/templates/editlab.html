@@ -1,0 +1,17 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% block title %} Edit Laboratorio {% endblock %}
+{% block JS %}{% static 'js/gest.js' %}{% endblock %}
+
+{% block body %}
+<h1>Editar Laboratorio</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Guardar">
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "./base.html" %}
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% block title %} Laboratorios {% endblock %}
+{% block JS %}{% static 'js/gest.js' %}{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5">
+        <div class="d-flex align-items-center">
+            <h1>Listado de Laboratorios </h1>
+            <a href="/agregar-laboratorio" class="btn btn-custom-green" title="Agregar Laboratorio">
+                <i class="fa-solid fa-plus"> ADD</i>
+            </a>
+        </div>
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">N°</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Pais</th>
+                    <th colspan="2">opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for x in laboratorios %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{ x.id }}</td>
+                        <td>{{ x.nombre }}</td>
+                        <td>{{ x.ciudad }}</td>
+                        <td>{{ x.pais }}</td>
+                        <td><a href="editar-laboratorio/{{x.id}}" class="btn btn-info" title="Editar Laboratorio"><i class="fa-solid fa-pencil"></i></a></td>
+                        <td><a href="eliminarlaboratorio/{{x.id}}" class="btn btn-danger btnEliminacion" title="Eliminar Laboratorio"><i class="fa-regular fa-trash-can"></i></a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,52 @@
+
+/* Cambia el color de fondo del botón */
+.btn-custom-green {
+  background-color: #dd5c458c; /* Cambia el color a tu primer verde personalizado */
+  color: rgb(4, 4, 4); /* Cambia el color del texto si es necesario */
+}
+
+/* Cambia el color de fondo del botón al pasar el cursor sobre él */
+.btn-custom-green:hover {
+  background-color: #913f9d8c; /* Cambia el color a tu segundo verde personalizado */
+  color: rgb(4, 4, 4); /* Cambia el color del texto si es necesario */
+}
+
+/* degrade celleste body */
+body {
+  background: #1fd21c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f2fcfe, #d21c1c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f2fcfe, #1cd228); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* cambio de color letras registro */
+#hint_id_username,
+#hint_id_password1,
+#hint_id_password2 {
+  color: #373737; /* Puedes ajustar el tono de plomo más oscuro según tus preferencias */
+}
+
+/* margen texto navbar */
+.navbar-brand {
+    margin-left: 2%; /* Ajusta el valor según tus necesidades */
+  }
+  .navbar-container {
+    margin-left: 4%;
+  }
+/* estilo de letras */
+body {
+    font-family: 'Akshar', sans-serif;
+}
+
+/* formato a las tablas */
+th,
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+/* JS table */
+
+/* centrado titulos tabla js */
+.centered {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
